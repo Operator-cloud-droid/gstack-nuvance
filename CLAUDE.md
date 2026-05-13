@@ -1,4 +1,14 @@
-# gstack development
+# Omoikane development
+
+This is Nuvance's fork of `garrytan/gstack`, rebranded as Omoikane. The fork
+preserves upstream technical engineering; the brand surface (name, voice,
+release notes, ETHOS) is Nuvance-specific. See `PANTHEON.md` for the kami
+naming scheme and `OMOIKANE-TRIAGE.md` for fork decisions.
+
+When this doc references "gstack" in technical paths (`gstack/llms.txt`,
+`bin/gstack-*`, `~/.gstack`), those names are upstream-inherited and have not
+yet been swept to `omoikane-*` — see the deferred items in `TODOS.md`. Treat
+them as their current on-disk names regardless of the brand-surface rename.
 
 ## Commands
 
@@ -30,7 +40,8 @@ use Codex's own auth from `~/.codex/` config — no `OPENAI_API_KEY` env var nee
 **Where the keys live on this machine.** Conductor workspaces don't inherit the
 user's interactive shell env, so `ANTHROPIC_API_KEY` and `OPENAI_API_KEY` aren't
 in the default process env. Before running any paid eval / E2E, source them from
-`~/.zshrc` (that's where Garry keeps them):
+`~/.zshrc` (the upstream convention; Nuvance dev machines should follow the same
+pattern unless you've established a different secret store):
 
 ```bash
 bash -c '
@@ -434,23 +445,25 @@ After cleanup: 90 findings, 358.1 score, 1.96 score/file.
 Don't chase the number. Fix patterns that represent actual code quality problems.
 Accept findings where the "sloppy" pattern is the correct engineering choice.
 
-## Community PR guardrails
+## Contribution guardrails (Nuvance internal)
 
-When reviewing or merging community PRs, **always AskUserQuestion** before accepting
-any commit that:
+This is a Nuvance internal fork. External community PRs are not accepted here —
+the upstream `garrytan/gstack` repo is the right destination for broadly useful
+changes.
 
-1. **Touches ETHOS.md** — this file is Garry's personal builder philosophy. No edits
-   from external contributors or AI agents, period.
-2. **Removes or softens promotional material** — YC references, founder perspective,
-   and product voice are intentional. PRs that frame these as "unnecessary" or
-   "too promotional" must be rejected.
-3. **Changes Garry's voice** — the tone, humor, directness, and perspective in skill
-   templates, CHANGELOG, and docs are not generic. PRs that rewrite voice to be
-   more "neutral" or "professional" must be rejected.
+For Nuvance-internal contributors and agents:
 
-Even if the agent strongly believes a change improves the project, these three
-categories require explicit user approval via AskUserQuestion. No exceptions.
-No auto-merging. No "I'll just clean this up."
+1. **ETHOS.md is starter scaffolding.** The current file is generic AI-engineering
+   principles inherited from upstream and explicitly flagged as replaceable.
+   Substantive edits welcome as Nuvance's voice forms. Touch with normal review
+   discipline, not a hard gate.
+2. **Branding and voice.** Omoikane voice is Nuvance's to define. There is no
+   external "house voice" to protect — write in the voice the Nuvance team has
+   settled on (or is in the process of settling on). When in doubt, prefer
+   clarity over personality.
+3. **Kami names.** When introducing a new tool with distinct character, follow
+   `PANTHEON.md`'s "How to choose a kami name" guidance. Don't kami-name generic
+   utilities; the `omoikane-` prefix is for those.
 
 ## CHANGELOG + VERSION style
 
@@ -587,9 +600,10 @@ the branch's history. When real work lands, the entry will replace this at /ship
 ### Release-summary format (every `## [X.Y.Z]` entry)
 
 Every version entry in `CHANGELOG.md` MUST start with a release-summary section in
-the GStack/Garry voice, one viewport's worth of prose + tables that lands like a
-verdict, not marketing. The itemized changelog (subsections, bullets, files) goes
-BELOW that summary, separated by a `### Itemized changes` header.
+the Omoikane voice (direct, concrete, no marketing), one viewport's worth of prose
++ tables that lands like a verdict, not a pitch. The itemized changelog
+(subsections, bullets, files) goes BELOW that summary, separated by a
+`### Itemized changes` header.
 
 The release-summary section gets read by humans, by the auto-update agent, and by
 anyone deciding whether to upgrade. The itemized list is for agents that need to
@@ -634,9 +648,10 @@ Write `### Itemized changes` and continue with the detailed subsections (Added,
 Changed, Fixed, For contributors). Same rules as the user-facing voice guidance
 above, plus:
 
-- **Always credit community contributions.** When an entry includes work from a
-  community PR, name the contributor with `Contributed by @username`. Contributors
-  did real work. Thank them publicly every time, no exceptions.
+- **Always credit contributors.** When an entry includes work from a Nuvance
+  contributor (or an upstream-cherry-picked patch), name them with
+  `Contributed by @username` or `Cherry-picked from garrytan/gstack#NNNN`.
+  Real work, real credit.
 
 ## AI effort compression
 
