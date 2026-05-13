@@ -1,6 +1,12 @@
-# Contributing to gstack
+# Contributing to Omoikane
 
-Thanks for wanting to make gstack better. Whether you're fixing a typo in a skill prompt or building an entirely new workflow, this guide will get you up and running fast.
+Internal Nuvance guide. Omoikane is Nuvance's fork of `garrytan/gstack` — broadly
+useful upstream contributions should target the upstream repo. This document
+covers contributing to the Nuvance-specific fork itself: typos, new internal
+skills, rebrand work, the deferred renames in `TODOS.md`, and the external
+Yatagarasu CLI workstream.
+
+Thanks for wanting to make Omoikane better. Whether you're fixing a typo in a skill prompt or building an entirely new workflow, this guide will get you up and running fast.
 
 ## Quick start
 

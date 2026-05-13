@@ -1,6 +1,6 @@
 # Browser — Complete Reference
 
-gstack's browser surface in one document. Headless Chromium daemon, ~70+
+Omoikane's browser surface in one document. Headless Chromium daemon, ~70+
 commands, ref-based element selection, codifiable browser-skills, real-browser
 mode with a Chrome side panel, an in-sidebar Claude PTY, an ngrok pair-agent
 flow, and a layered prompt-injection defense — all behind a compiled CLI that

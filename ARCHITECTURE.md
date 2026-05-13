@@ -1,6 +1,12 @@
 # Architecture
 
-This document explains **why** gstack is built the way it is. For setup and commands, see CLAUDE.md. For contributing, see CONTRIBUTING.md.
+This document explains **why** Omoikane is built the way it is. For setup and commands, see CLAUDE.md. For contributing, see CONTRIBUTING.md.
+
+> *Omoikane is Nuvance's fork of `garrytan/gstack`. The architecture described
+> here is upstream's — preserved verbatim. References to "gstack" in older
+> sections are technical paths (binary names, env vars, on-disk directories)
+> that haven't yet been swept to `omoikane-*`. See `TODOS.md` for the deferred
+> rename work.*
 
 ## The core idea
 

@@ -1,8 +1,8 @@
-# Design System — gstack
+# Design System — Omoikane
 
 ## Product Context
-- **What this is:** Community website for gstack — a CLI tool that turns Claude Code into a virtual engineering team
-- **Who it's for:** Developers discovering gstack, existing community members
+- **What this is:** Nuvance-internal toolkit page for Omoikane — a CLI suite that turns Claude Code into a virtual engineering team
+- **Who it's for:** Nuvance engineers and operators using Omoikane day-to-day
 - **Space/industry:** Developer tools (peers: Linear, Raycast, Warp, Zed)
 - **Project type:** Community dashboard + marketing site
 

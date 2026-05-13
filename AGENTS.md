@@ -1,8 +1,9 @@
-# gstack — AI Engineering Workflow
+# Omoikane — AI Engineering Workflow
 
-gstack is a collection of SKILL.md files that give AI agents structured roles for
-software development. Each skill is a specialist: CEO reviewer, eng manager,
-designer, QA lead, release engineer, debugger, and more.
+Omoikane (Nuvance's fork of `garrytan/gstack`) is a collection of SKILL.md files
+that give AI agents structured roles for software development. Each skill is a
+specialist: CEO reviewer, eng manager, designer, QA lead, release engineer,
+debugger, and more.
 
 ## Available skills
 
