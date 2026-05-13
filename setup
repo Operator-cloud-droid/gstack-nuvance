@@ -236,7 +236,7 @@ if [ "$NEEDS_BUILD" -eq 1 ]; then
   log "Building browse binary..."
   (
     cd "$SOURCE_GSTACK_DIR"
-    bun install --frozen-lockfile 2>/dev/null || bun install
+    bun install --frozen-lockfile
     bun run build
   )
   # Safety net: write .version if build script didn't (e.g., git not available during build)
@@ -296,7 +296,7 @@ if [ "$NEEDS_AGENTS_GEN" -eq 1 ] && [ "$NEEDS_BUILD" -eq 0 ]; then
   log "Generating .agents/ skill docs..."
   (
     cd "$SOURCE_GSTACK_DIR"
-    bun install --frozen-lockfile 2>/dev/null || bun install
+    bun install --frozen-lockfile
     bun run gen:skill-docs --host codex
   )
 fi
@@ -306,7 +306,7 @@ if [ "$INSTALL_FACTORY" -eq 1 ] && [ "$NEEDS_BUILD" -eq 0 ]; then
   log "Generating .factory/ skill docs..."
   (
     cd "$SOURCE_GSTACK_DIR"
-    bun install --frozen-lockfile 2>/dev/null || bun install
+    bun install --frozen-lockfile
     bun run gen:skill-docs --host factory
   )
 fi
@@ -316,7 +316,7 @@ if [ "$INSTALL_OPENCODE" -eq 1 ] && [ "$NEEDS_BUILD" -eq 0 ]; then
   log "Generating .opencode/ skill docs..."
   (
     cd "$SOURCE_GSTACK_DIR"
-    bun install --frozen-lockfile 2>/dev/null || bun install
+    bun install --frozen-lockfile
     bun run gen:skill-docs --host opencode
   )
 fi
