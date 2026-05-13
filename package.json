@@ -1,7 +1,7 @@
 {
-  "name": "gstack",
-  "version": "1.33.2.0",
-  "description": "Garry's Stack — Claude Code skills + fast headless browser. One repo, one install, entire AI engineering workflow.",
+  "name": "omoikane",
+  "version": "1.0.0.0",
+  "description": "Omoikane — Nuvance's AI engineering toolkit. Claude Code skills + fast headless browser + design + PDF tools. Forked from gstack.",
   "license": "MIT",
   "type": "module",
   "bin": {
@@ -55,6 +55,8 @@
     "bun": ">=1.0.0"
   },
   "keywords": [
+    "omoikane",
+    "nuvance",
     "browser",
     "automation",
     "playwright",
